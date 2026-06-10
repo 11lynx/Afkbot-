@@ -1,0 +1,20 @@
+const mineflayer = require('mineflayer');
+
+const bot = mineflayer.createBot({
+  host: 'Skibidi-7004.aternos.me',
+  port: 18824,
+  username: 'Slobot00'
+});
+
+bot.on('spawn', () => {
+  console.log('Bot ist online!');
+  bot.chat('Ich bin jetzt online!');
+});
+
+bot.on('error', (err) => {
+  console.log('Fehler:', err);
+});
+
+bot.on('end', () => {
+  console.log('Bot wurde getrennt');
+});
